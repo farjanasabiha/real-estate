@@ -23,7 +23,9 @@ const AuthProvider = ({ children }) => {
   // Create User or Sign up / Registration
   const createUser = (email, password) => {
     setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
+      return createUserWithEmailAndPassword(auth, email, password);
+      
+      
   };
 
   // LogIn or Sign In

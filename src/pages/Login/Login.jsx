@@ -89,7 +89,6 @@ const Login = () => {
               type={showPassword ? "password" : "text"}
               name="password"
               className="grow"
-              value="sabiha"
             />
 
             <span
@@ -140,3 +139,7 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+

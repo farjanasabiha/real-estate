@@ -4,9 +4,8 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-
+import { sendEmailVerification, updateProfile } from "firebase/auth";
 const Register = () => {
-
   const { createUser } = useContext(AuthContext);
   const [swalProps, setSwalProps] = useState({});
   const [registerError, setRegisterError] = useState("");
@@ -46,6 +45,22 @@ const Register = () => {
         console.log(result.user);
         // Success Messgae
         Swal.fire("User created Successfully");
+
+        // Update Profile
+
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: "https://example.com/jane-q-user/profile.jpg",
+        })
+          .then(() => {
+            console.log("Profile Updated");
+          })
+          .catch();
+
+        // Send Varification email
+        sendEmailVerification(result.user).then(() => {
+          Swal.fire("Please check your email and verify your account");
+        });
       })
       .catch((error) => {
         console.error(error);

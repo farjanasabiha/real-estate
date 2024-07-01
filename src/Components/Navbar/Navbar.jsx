@@ -77,12 +77,15 @@ const Navbar = () => {
 
         <div className="navbar-end ">
           {user ? (
-            <button
-              onClick={handleSignOut}
-              className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
-            >
-              Log Out
-            </button>
+            <div className="flex items-center justify-center gap-3">
+              <img className="w-14 h-14 rounded-full"  src={user.photoURL} alt="User Profile" />
+              <button
+                onClick={handleSignOut}
+                className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+              >
+                Log Out
+              </button>
+            </div>
           ) : (
             <a
               href="/login"
