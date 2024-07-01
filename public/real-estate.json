@@ -1,0 +1,107 @@
+[
+  {
+    "id": "001",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/qpX9Ppb/d12c6263e676cbf3a68a14e48c9e5d1a.jpg",
+    "segment": "single-family homes",
+    "description": "A modern single-family home with an open floor plan and a spacious backyard.",
+    "price": 450000,
+    "status": "sale",
+    "area": "2500 sq feet",
+    "location": "456 Elm Street, Yourtown, USA",
+    "facilities": [
+      "living room",
+      "swimming pool",
+      "kitchen",
+      "garage",
+      "garden"
+    ]
+  },
+  {
+    "id": "002",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/hdMCHnF/w620x413.jpg",
+    "segment": "townhouses",
+    "description": "A cozy townhouse with modern amenities and a private patio.",
+    "price": 300000,
+    "status": "sale",
+    "area": "1800 sq feet",
+    "location": "789 Oak Street, Anytown, USA",
+    "facilities": ["living room", "kitchen", "patio", "garage"]
+  },
+  {
+    "id": "003",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/2t187GX/10250925-1.jpg",
+    "segment": "apartments",
+    "description": "A luxury apartment with stunning city views and high-end finishes.",
+    "price": 2500,
+    "status": "rent",
+    "area": "1200 sq feet",
+    "location": "101 Maple Avenue, Metropolis, USA",
+    "facilities": ["living room", "kitchen", "balcony", "gym"]
+  },
+
+  {
+    "id": "004",
+    "estate_title": "residential",
+    "image_link": " https://i.ibb.co/4SDBwwd/19.jpg",
+    "segment": "student housing",
+    "description": "Affordable student housing with shared amenities and close to campus.",
+    "price": 800,
+    "status": "rent",
+    "area": "600 sq feet",
+    "location": "202 University Drive, College Town, USA",
+    "facilities": ["living room", "kitchen", "study room", "laundry"]
+  },
+  {
+    "id": "005",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/28dGfCt/f82fe2daff575358aa88281a74c2577a.jpg",
+    "segment": "senior living community",
+    "description": "A comfortable senior living community with healthcare facilities and recreational activities.",
+    "price": 2000,
+    "status": "rent",
+    "area": "900 sq feet",
+    "location": "303 Retirement Lane, Serenity, USA",
+    "facilities": ["living room", "kitchen", "healthcare", "recreation room"]
+  },
+  {
+    "id": "006",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/SdHZYL7/ai-generative-exterior-of-modern-luxury-house-with-garden-and-beautiful-sky-photo.jpg",
+    "segment": "vacation rentals",
+    "description": "A beachfront vacation rental with stunning ocean views and direct beach access.",
+    "price": 3500,
+    "status": "rent",
+    "area": "2000 sq feet",
+    "location": "404 Ocean Drive, Beachside, USA",
+    "facilities": ["living room", "kitchen", "beach access", "terrace"]
+  },
+
+  {
+    "id": "007",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/3mBX9KB/Stock-Modern-House-With-Large-Pool-Adobe-Stock-127770833-Copy.jpg",
+    "segment": "single-family homes",
+    "description": "A charming single-family home in a quiet neighborhood with a large garden.",
+    "price": 400000,
+    "status": "sale",
+    "area": "2200 sq feet",
+    "location": "505 Pine Street, Smalltown, USA",
+    "facilities": ["living room", "kitchen", "garden", "garage", "basement"]
+  },
+  {
+    "id": "008",
+    "estate_title": "residential",
+    "image_link": "https://i.ibb.co/ypW4xf1/beautiful-modern-house-exterior-with-carport-modern-residential-district-and-minimalist-building-con.jpg",
+    "segment": "townhouses",
+    "description": "A stylish townhouse with three bedrooms and a rooftop terrace.",
+    "price": 320000,
+    "status": "sale",
+    "area": "1900 sq feet",
+    "location": "606 Birch Avenue, Uptown, USA",
+    "facilities": ["living room", "kitchen", "beach access", "terrace"]
+  }
+]
+
