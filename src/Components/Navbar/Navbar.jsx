@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 
+import "../../App.css";
+
+
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
 
@@ -78,7 +81,14 @@ const Navbar = () => {
         <div className="navbar-end ">
           {user ? (
             <div className="flex items-center justify-center gap-3">
-              <img className="w-14 h-14 rounded-full"  src={user.photoURL} alt="User Profile" />
+              <div className="navContainer">
+                <img
+                  className="image w-14 h-14 cursor-pointer"
+                  src={user.photoURL}
+                  alt="User Profile"
+                />
+                <div className="overlay">{ user.displayName}</div>
+              </div>
               <button
                 onClick={handleSignOut}
                 className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
