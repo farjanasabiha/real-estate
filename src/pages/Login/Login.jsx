@@ -5,9 +5,8 @@ import Swal from "sweetalert2";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
-
 const Login = () => {
-const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
 
   const [swalProps, setSwalProps] = useState({});
   const [showPassword, setShowPassword] = useState(true);
@@ -27,6 +26,27 @@ const { signIn } = useContext(AuthContext);
         console.error(error);
       });
   };
+
+  const handleGoogleLogin = () => {
+    console.log("hello");
+    googleLogin()
+      .then((reuslt) => {
+        console.log(reuslt.user);
+      })
+      .catch(error => {
+        console.error('error', error.message);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin()
+      .then((reuslt) => {
+        console.log(reuslt.user);
+      })
+      .catch((error) => {
+        console.error("error", error.message);
+      });
+  }
 
   return (
     <div className="container mx-auto">
@@ -86,19 +106,20 @@ const { signIn } = useContext(AuthContext);
                 title: "",
                 text: "",
               });
-            }} 
+            }}
             className="btn w-full inline-block px-8 bg-[#4b85f0] text-white transition font-semibold duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
             type="submit"
             value="LogIn"
           ></input>
           <div className="flex items-center justify-between gap-3">
             <button
+              onClick={handleGoogleLogin}
               href="/login"
               className="btn px-8 bg-[#4b85f0] text-white transition duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
             >
               Login with Google
             </button>
-            <button
+            <button onClick={handleGithubLogin}
               href="/login"
               className="btn px-8 bg-[#4b85f0] text-white transition duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
             >
