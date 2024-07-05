@@ -30,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog/:id",
-        element: <Blog></Blog>,
+        element: (
+          <PrivateRoute>
+            <Blog></Blog>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateProfile",

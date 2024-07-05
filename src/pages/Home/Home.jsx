@@ -7,8 +7,15 @@ import "./styles.css";
 import { Parallax, Pagination, Navigation } from "swiper/modules";
 import { useLoaderData } from "react-router-dom";
 import BlogCards from "../../Components/BlogCards/BlogCards";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Home = () => {
+
+      useEffect(() => {
+        AOS.init();
+      }, []);
+  document.title= "HomePress - Home"
 
   const blogs = useLoaderData();
   return (
@@ -43,7 +50,7 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto">
+            <div data-aos="fade-right" className="container mx-auto">
               <div className="title" data-swiper-parallax="-400">
                 ALL YOU NEED TO CREATE
               </div>
@@ -59,7 +66,10 @@ const Home = () => {
               </div>
               <div className="button" data-swiper-parallax="-100">
                 <div className="mt-10">
-                  <a className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base">
+                  <a
+                    href="/login"
+                    className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base"
+                  >
                     Login
                   </a>
                 </div>
@@ -74,7 +84,7 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto">
+            <div data-aos="fade-right" className="container mx-auto">
               <div className="title" data-swiper-parallax="-400">
                 ALL YOU NEED TO CREATE
               </div>
@@ -90,7 +100,10 @@ const Home = () => {
               </div>
               <div className="button" data-swiper-parallax="-100">
                 <div className="mt-10">
-                  <a className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base">
+                  <a
+                    href="/login"
+                    className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base"
+                  >
                     Login
                   </a>
                 </div>
@@ -105,7 +118,7 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="container mx-auto">
+            <div data-aos="fade-right" className="container mx-auto">
               <div className="title" data-swiper-parallax="-400">
                 ALL YOU NEED TO CREATE
               </div>
@@ -121,7 +134,10 @@ const Home = () => {
               </div>
               <div className="button" data-swiper-parallax="-100">
                 <div className="mt-10">
-                  <a className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base">
+                  <a
+                    href="/login"
+                    className="btn px-10 bg-[#4b85f0] text-white font-semibold text-base"
+                  >
                     Login
                   </a>
                 </div>
@@ -143,7 +159,10 @@ const Home = () => {
                 space from a landlord for a specified period.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+            <div
+              data-aos="fade-up"
+              className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+            >
               {blogs.map((blog, index) => (
                 <BlogCards blog={blog} key={index}></BlogCards>
               ))}

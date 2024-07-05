@@ -8,6 +8,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
+  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -20,12 +21,24 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // const handleAuthProvide = (allProvider) => {
+  //   allProvider().then((result) => {
+  //     console.log(result.user);
+  //   });
+  // };
+
+  // Update User Profile
+  const updateUserProfile = (name, image) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image,
+    });
+  };
+
   // Create User or Sign up / Registration
   const createUser = (email, password) => {
     setLoading(true);
-      return createUserWithEmailAndPassword(auth, email, password);
-      
-      
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // LogIn or Sign In
@@ -38,13 +51,13 @@ const AuthProvider = ({ children }) => {
   const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
-    };
-    
-    // GitHub Login
-    const githubLogin = () => {
-        setLoading(true);
-        return signInWithPopup(auth, githubProvider)
-    }
+  };
+
+  // GitHub Login
+  const githubLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
 
   // LogOut
   const logout = () => {
@@ -71,6 +84,7 @@ const AuthProvider = ({ children }) => {
     logout,
     googleLogin,
     githubLogin,
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

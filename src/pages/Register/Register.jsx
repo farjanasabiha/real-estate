@@ -4,12 +4,13 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { sendEmailVerification, updateProfile } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [swalProps, setSwalProps] = useState({});
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowPassword] = useState(true);
+  document.title = "HomePress - Register";
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -58,9 +59,9 @@ const Register = () => {
           .catch();
 
         // Send Varification email
-        sendEmailVerification(result.user).then(() => {
-          Swal.fire("Please check your email and verify your account");
-        });
+        // sendEmailVerification(result.user).then(() => {
+        //   Swal.fire("Please check your email and verify your account");
+        // });
       })
       .catch((error) => {
         console.error(error);
@@ -70,7 +71,6 @@ const Register = () => {
   };
   return (
     <div className="container mx-auto">
-      <div>
         <form
           onSubmit={handleRegister}
           className="flex items-center justify-center flex-col py-28"
@@ -166,7 +166,6 @@ const Register = () => {
             <p className="text-red-600 font-semibold mt-5">{registerError}</p>
           )}
         </form>
-      </div>
     </div>
   );
 };

@@ -87,7 +87,7 @@ const Navbar = () => {
                   src={user.photoURL}
                   alt="User Profile"
                 />
-                <div className="overlay">{ user.displayName}</div>
+                <div className="overlay">{user.displayName}</div>
               </div>
               <button
                 onClick={handleSignOut}
@@ -97,12 +97,20 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <a
-              href="/login"
-              className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
-            >
-              <button>Login</button>
-            </a>
+            <div>
+              <a
+                href="/login"
+                className="btn mr-3 px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+              >
+                <button>Login</button>
+              </a>
+              <a
+                href="/register"
+                className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+              >
+                <button>Register</button>
+              </a>
+            </div>
           )}
         </div>
       </div>

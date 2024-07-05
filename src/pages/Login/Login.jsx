@@ -6,7 +6,9 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
-  const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
+  const { signIn, googleLogin, githubLogin, } =
+    useContext(AuthContext);
+  document.title = "HomePress - Login";
 
   const [swalProps, setSwalProps] = useState({});
   const [showPassword, setShowPassword] = useState(true);
@@ -33,8 +35,8 @@ const Login = () => {
       .then((reuslt) => {
         console.log(reuslt.user);
       })
-      .catch(error => {
-        console.error('error', error.message);
+      .catch((error) => {
+        console.error("error", error.message);
       });
   };
 
@@ -46,7 +48,7 @@ const Login = () => {
       .catch((error) => {
         console.error("error", error.message);
       });
-  }
+  };
 
   return (
     <div className="container mx-auto">
@@ -118,7 +120,8 @@ const Login = () => {
             >
               Login with Google
             </button>
-            <button onClick={handleGithubLogin}
+            <button
+              onClick={handleGithubLogin}
               href="/login"
               className="btn px-8 bg-[#4b85f0] text-white transition duration-300 font-normal text-base hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
             >
@@ -139,7 +142,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
