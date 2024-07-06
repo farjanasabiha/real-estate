@@ -8,7 +8,6 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
-  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -28,12 +27,12 @@ const AuthProvider = ({ children }) => {
   // };
 
   // Update User Profile
-  const updateUserProfile = (name, image) => {
-    return updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: image,
-    });
-  };
+  // const updateUserProfile = (name, image) => {
+  //   return updateProfile(auth.currentUser, {
+  //     displayName: name,
+  //     photoURL: image,
+  //   });
+  // };
 
   // Create User or Sign up / Registration
   const createUser = (email, password) => {
@@ -84,7 +83,6 @@ const AuthProvider = ({ children }) => {
     logout,
     googleLogin,
     githubLogin,
-    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
