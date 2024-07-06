@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
+
+
+import "animate.css";
+
 const auth = getAuth();
 
 const UpdateProfile = () => {
@@ -21,7 +25,7 @@ const UpdateProfile = () => {
     });
   };
   return (
-    <div>
+    <div className="animate__animated animate__backInDown">
       <form
         onSubmit={handleUpdateProfile}
         className="flex items-center justify-center flex-col py-28"
