@@ -68,7 +68,7 @@ const Navbar = () => {
               {navbar}
             </ul>
           </div>
-          <a className="text-2xl font-bold cursor-pointer">
+          <a className="text-base md:text-2xl font-bold cursor-pointer">
             Home<span className="text-[#4b85f0]">Press</span>
           </a>
         </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </div>
               <button
                 onClick={handleSignOut}
-                className="btn px-8 bg-[#4b85f0] text-white font-semibold text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
+                className="btn px-2 md:px-8 bg-[#4b85f0] text-white font-semibold text-sm md:text-lg hover:bg-transparent hover:text-[#4b85f0] hover:border-solid hover:border-[#4b85f0]"
               >
                 Log Out
               </button>

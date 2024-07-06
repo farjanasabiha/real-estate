@@ -161,7 +161,7 @@ const Home = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+              className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             >
               {blogs.map((blog, index) => (
                 <BlogCards blog={blog} key={index}></BlogCards>
